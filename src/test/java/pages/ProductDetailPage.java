@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.PageHelper;
 
-public class ProductDetailPage {
+public class ProductDetailPage extends PageHelper {
 
     public ProductDetailPage(WebDriver webDriver) {
         PageFactory.initElements(webDriver, this);
@@ -29,16 +29,16 @@ public class ProductDetailPage {
     private WebElement thanksText;
 
     public void clickReviewsTab() {
-        PageHelper.switchWindow();
-        PageHelper.clickElement(reviewsTab);
+        switchWindow();
+        clickElement(reviewsTab);
     }
 
     public void clickLikeCommentButton() {
-        PageHelper.clickElement(likeFirstCommentButton);
+        clickElement(likeFirstCommentButton);
     }
 
     public void checkCommentsAndVerifyMessage() {
-        String[] commentCountText = PageHelper.getElementText(commentsCount).split("[^0-9]+");
+        String[] commentCountText = getElementText(commentsCount).split("[^0-9]+");
         int commentCount = Integer.parseInt(commentCountText[1]);
         if (commentCount != 0) {
             clickLikeCommentButton();
@@ -49,7 +49,7 @@ public class ProductDetailPage {
     }
 
     public void verifyThanksToMessage() {
-        String actualMessage = PageHelper.getElementText(thanksText);
+        String actualMessage = getElementText(thanksText);
         String expectedMessage = "Teşekkür Ederiz.";
         Assert.assertEquals(expectedMessage, actualMessage);
     }

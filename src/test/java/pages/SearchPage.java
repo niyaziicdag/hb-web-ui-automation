@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.PageHelper;
 
-public class SearchPage {
+public class SearchPage extends PageHelper {
 
     public SearchPage(WebDriver webDriver) {
         PageFactory.initElements(webDriver, this);
@@ -16,7 +16,7 @@ public class SearchPage {
     private WebElement firstSearchResult;
 
     public void clickFirstProduct() {
-        PageHelper.clickElement(firstSearchResult);
+        clickElement(firstSearchResult);
     }
 
     public void verifySearchPage() {

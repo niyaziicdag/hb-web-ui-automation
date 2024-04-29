@@ -3,8 +3,9 @@ package pages;
 import config.BaseConfig;
 import org.openqa.selenium.support.PageFactory;
 import utils.Driver;
+import utils.PageHelper;
 
-public class BasePage {
+public class BasePage extends PageHelper {
 
     public BasePage() {
         PageFactory.initElements(Driver.getDriver(), this);

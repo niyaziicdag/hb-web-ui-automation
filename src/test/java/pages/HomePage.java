@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.PageHelper;
 
-public class HomePage {
+public class HomePage extends PageHelper{
 
     public HomePage(WebDriver webDriver) {
         PageFactory.initElements(webDriver, this);
@@ -31,12 +31,12 @@ public class HomePage {
     private WebElement atLeastCharacters;
 
     public void clickAcceptCookieButton() {
-        PageHelper.clickElement(acceptCookieButton);
-        PageHelper.waitUntilElementIsNotDisplayed(acceptCookieButton);
+        clickElement(acceptCookieButton);
+        waitUntilElementIsNotDisplayed(acceptCookieButton);
     }
 
     public void clickSearchBar() {
-        PageHelper.clickWithJavaScript(searchBar);
+        clickWithJavaScript(searchBar);
     }
 
     public void verifyAtLeastCharacters() {
@@ -44,7 +44,7 @@ public class HomePage {
     }
 
     public void clickSearchButton() {
-        PageHelper.clickElement(searchButton);
+        clickElement(searchButton);
     }
 
     public void fillSearchBar(String searchText) {
