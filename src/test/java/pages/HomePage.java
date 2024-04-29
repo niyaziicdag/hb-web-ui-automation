@@ -24,12 +24,23 @@ public class HomePage {
     @FindBy(xpath = "//div[contains(@class, 'searchBoxOld') and text()='ARA']")
     private WebElement searchButton;
 
+    @FindBy(css = "#react-autowhatever-1--item-1")
+    private WebElement searchResults;
+
+    @FindBy(css = "#react-autowhatever-1")
+    private WebElement atLeastCharacters;
+
     public void clickAcceptCookieButton() {
         PageHelper.clickElement(acceptCookieButton);
+        PageHelper.waitUntilElementIsNotDisplayed(acceptCookieButton);
     }
 
     public void clickSearchBar() {
-        PageHelper.clickElement(searchBar);
+        PageHelper.clickWithJavaScript(searchBar);
+    }
+
+    public void verifyAtLeastCharacters() {
+        atLeastCharacters.isDisplayed();
     }
 
     public void clickSearchButton() {
@@ -38,5 +49,9 @@ public class HomePage {
 
     public void fillSearchBar(String searchText) {
         inputSearchBar.sendKeys(searchText);
+    }
+
+    public void verifyResultsDisplayed() {
+        searchResults.isDisplayed();
     }
 }

@@ -5,9 +5,9 @@ public class BaseConfig {
         return new BaseConfig();
     }
 
-    String browser = System.getenv("BROWSER");
-    String env = System.getenv("ENV");
-    String headless = System.getenv("HEADLESS");
+    String browser = System.getProperty("browser");
+    String env = System.getProperty("env");
+    String headless = System.getProperty("headless");
 
     public String getBrowser() {
         return (browser != null) ? browser : "chrome";

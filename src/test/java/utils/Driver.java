@@ -19,21 +19,18 @@ public class Driver {
             switch (BaseConfig.getInstance().getBrowser()) {
                 case "chrome":
                     chromeOptions.addArguments("--remote-allow-origins=*");
+                    chromeOptions.addArguments("--disable-notifications");
                     if (BaseConfig.getInstance().getHeadless()) chromeOptions.addArguments("--headless");
-                    System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
                     driver = new ChromeDriver(chromeOptions);
                     break;
                 case "safari":
-                    System.setProperty("webdriver.safari.driver", "path/to/safaridriver");
                     driver = new SafariDriver();
                     break;
                 case "firefox":
-                    System.setProperty("webdriver.gecko.driver", "path/to/geckodriver");
                     driver = new FirefoxDriver(firefoxOptions);
                     break;
                 default:
                     chromeOptions.addArguments("--remote-allow-origins=*");
-                    System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
                     driver = new ChromeDriver(chromeOptions);
             }
         }

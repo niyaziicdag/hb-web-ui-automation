@@ -12,8 +12,13 @@ public class HomeSteps {
     HomePage homePage = new HomePage(webDriver);
 
     @When("click search bar on homepage")
-    public void clickSearchBar() {
+    public void clickSearchBar() throws InterruptedException {
         homePage.clickSearchBar();
+    }
+
+    @When("verify at least 2 characters text")
+    public void verifyAtLeastCharacters() {
+        homePage.verifyAtLeastCharacters();
     }
 
     @When("click accept cookie button on homepage")
@@ -27,8 +32,13 @@ public class HomeSteps {
     }
 
     @When("fill search bar with {string} on homepage")
-    public void clickSearchBar(String search) {
+    public void clickSearchBar(String search) throws InterruptedException {
         homePage.fillSearchBar(search);
+    }
+
+    @Then("verify that the results match what is displayed")
+    public void verifyResultsDisplayed() {
+        homePage.verifyResultsDisplayed();
     }
 
     @Then("verify that home page is visible successfully")
