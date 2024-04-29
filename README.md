@@ -58,6 +58,16 @@ To run this project, the following software and tools need to be installed:
 - Web browser drivers (Chrome WebDriver, Firefox WebDriver, etc.)
 - Git (optional)
 
+## Running Tests
+
+## Running Tests
+
+To run the tests for this project, you can use the following Maven command:
+
+```bash
+mvn clean test -Dtest=Runner "-Dtags=@regression" -Dbrowser="chrome"
+```
+
 ## Reports
 
 ```
@@ -65,5 +75,11 @@ allure serve allure-results
 ```
 
 ## Screenshot
-  
-  <img src="https://i.imgur.com/bZJb5f5.png">
+
+- Success Screenshots
+  <img src="https://i.imgur.com/BOmVKAs.png">
+  <img src="https://i.imgur.com/88qXu4B.png">
+- No Comment Success Screenshots
+<img src="https://i.imgur.com/aVf2Dab.png">
+- Failed Screenshot
+<img src="https://i.imgur.com/ajgk5s7.png">
