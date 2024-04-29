@@ -6,6 +6,17 @@ This project is created to automate tests for Hepsiburada Study Case web applica
 
 This project is used to perform automation tests for Hepsiburada Study Case web application. It utilizes Cucumber scenario files, Selenium WebDriver, and Java programming language to test different features and scenarios of the web application.
 
+## Requirements
+
+To run this project, the following software and tools need to be installed:
+
+- Java JDK (version 8 or above)
+- Maven
+- Selenium
+- Cucumber
+- Git (optional)
+- IDE (IntelliJ IDEA, Eclipse, etc.)
+
 ## Test Cases
 
 - The user visits the hepsiburada.com website.
@@ -15,6 +26,26 @@ This project is used to perform automation tests for Hepsiburada Study Case web 
 - The user clicks the "Yes" button for the first review among the displayed reviews.
 - The user sees the message "Thank you".
 - If there are no reviews in the "Reviews" tab, the user does not perform any action.
+
+## Setup
+
+1. **Clone the repository:**
+
+    ```
+    https://github.com/niyaziicdag/hb-web-ui-automation
+    ```
+
+2. **Navigate to the project directory:**
+
+    ```
+    cd hb-web-ui-test-automation
+    ```
+
+3. **Install dependencies:**
+
+    ```bash
+    mvn install
+    ```
 
 # Project tree
 
@@ -48,17 +79,6 @@ This project is used to perform automation tests for Hepsiburada Study Case web 
 |-- pom.xml
 |-- README.md
 ```
-
-## Requirements
-
-To run this project, the following software and tools need to be installed:
-
-- Java JDK (version 8 or above)
-- Maven
-- Web browser drivers (Chrome WebDriver, Firefox WebDriver, etc.)
-- Git (optional)
-
-## Running Tests
 
 ## Running Tests
 
