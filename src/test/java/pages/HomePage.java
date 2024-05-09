@@ -15,6 +15,9 @@ public class HomePage extends PageHelper{
     @FindBy(id = "onetrust-accept-btn-handler")
     private WebElement acceptCookieButton;
 
+    @FindBy(css = "#react-autowhatever-1")
+    private WebElement atLeastCharacters;
+
     @FindBy(css = "input[aria-controls='react-autowhatever-1']")
     private WebElement inputSearchBar;
 
@@ -27,9 +30,6 @@ public class HomePage extends PageHelper{
     @FindBy(css = "#react-autowhatever-1--item-1")
     private WebElement searchResults;
 
-    @FindBy(css = "#react-autowhatever-1")
-    private WebElement atLeastCharacters;
-
     public void clickAcceptCookieButton() {
         clickElement(acceptCookieButton);
         waitUntilElementIsNotDisplayed(acceptCookieButton);
@@ -37,10 +37,6 @@ public class HomePage extends PageHelper{
 
     public void clickSearchBar() {
         clickWithJavaScript(searchBar);
-    }
-
-    public void verifyAtLeastCharacters() {
-        atLeastCharacters.isDisplayed();
     }
 
     public void clickSearchButton() {
@@ -53,5 +49,9 @@ public class HomePage extends PageHelper{
 
     public void verifyResultsDisplayed() {
         searchResults.isDisplayed();
+    }
+
+    public void verifyAtLeastCharacters() {
+        atLeastCharacters.isDisplayed();
     }
 }

@@ -22,9 +22,6 @@ public class ProductDetailPage extends PageHelper {
     @FindBy(id = "productReviews")
     private WebElement reviewsTab;
 
-    @FindBy(css = "span[class='ratings-add']")
-    private WebElement ratingAddText;
-
     @FindBy(xpath = "//div[@itemprop= 'review'][1]//div[contains(@class, 'ReviewCard-module') and text()='Bildir']//../div[contains(@class, 'ReviewCard-module')][2]")
     private WebElement thanksText;
 

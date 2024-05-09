@@ -10,8 +10,8 @@ Feature: Product Detail Features
     And click search bar on homepage
     Then verify at least 2 characters text
     When fill search bar with "iphone" on homepage
-    Then verify that the results match what is displayed
-    And click search button on homepage
+    Then verify suggested search results on homepage
+    When click search button on homepage
     Then verify that the successfully search
     When click first product on search page
     And click reviews tab on product detail page

@@ -16,11 +16,6 @@ public class HomeSteps {
         homePage.clickSearchBar();
     }
 
-    @When("verify at least 2 characters text")
-    public void verifyAtLeastCharacters() {
-        homePage.verifyAtLeastCharacters();
-    }
-
     @When("click accept cookie button on homepage")
     public void clickAcceptCookie() {
         homePage.clickAcceptCookieButton();
@@ -36,7 +31,12 @@ public class HomeSteps {
         homePage.fillSearchBar(search);
     }
 
-    @Then("verify that the results match what is displayed")
+    @When("verify at least 2 characters text")
+    public void verifyAtLeastCharacters() {
+        homePage.verifyAtLeastCharacters();
+    }
+
+    @Then("verify suggested search results on homepage")
     public void verifyResultsDisplayed() {
         homePage.verifyResultsDisplayed();
     }
