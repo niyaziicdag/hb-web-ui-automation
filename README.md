@@ -1,10 +1,10 @@
-# Hepsiburada Study Case Web Automation
+# Java Selenium Web Automation
 
-This project is created to automate tests for Hepsiburada Study Case web application using Selenium, Java, Cucumber, and Gherkin.
+This project is created to automate tests for Java Selenium web application using Selenium, Java, Cucumber, and Gherkin.
 
 ## About the Project
 
-This project is used to perform automation tests for Hepsiburada Study Case web application. It utilizes Cucumber scenario files, Selenium WebDriver, and Java programming language to test different features and scenarios of the web application.
+This project is used to perform automation tests for Java Selenium web application. It utilizes Cucumber scenario files, Selenium WebDriver, and Java programming language to test different features and scenarios of the web application.
 
 ## Requirements
 
